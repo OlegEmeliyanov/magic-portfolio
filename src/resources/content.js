@@ -10,7 +10,7 @@ const person = {
   avatar: "/images/avatar.jpg",
   email: "oleg@emeliyanov.it",
   location: "Europe/Rome", // Expecting the IANA time zone identifier, e.g., 'Europe/Vienna'
-  languages: ["English", "Italiano"], // optional: Leave the array empty if you don't want to display languages
+  languages: ["English", "Italin", "Russian"], // optional: Leave the array empty if you don't want to display languages
 };
 
 const newsletter = {
@@ -28,20 +28,15 @@ const social = [
   // Links are automatically displayed.
   // Import new icons in /once-ui/icons.ts
   {
-    name: "X.com",
-    icon: "x",
-    link: "https://x.com/olegemeliyanov",
-  },
-  {
     name: "LinkedIn",
     icon: "linkedin",
     link: "https://www.linkedin.com/in/oleg-emeliyanov/",
   },
-  // {
-  //   name: "Threads",
-  //   icon: "threads",
-  //   link: "https://www.threads.com/@once_ui",
-  // },
+  {
+    name: "X.com",
+    icon: "x",
+    link: "https://x.com/olegemeliyanov",
+  },
   {
     name: "Email",
     icon: "email",
@@ -58,12 +53,6 @@ const home = {
   headline: <>Building bridges between design and manufacturing</>,
   featured: {
     display: true,
-    title: (
-      <>
-        Recent project: <strong className="ml-4">Once UI</strong>
-      </>
-    ),
-    href: "/work/building-once-ui-a-customizable-design-system",
   },
   subline: (
     <>
@@ -71,6 +60,8 @@ const home = {
       transforming spaces with smart, stylish solutions. I develop custom design
       tools using 3Cad Evolution, turning creative concepts into precise,
       functional realities.
+      When I'm not crafting workflows and design systems, you'll likely find me in the skies, immersed in the world of UltraLight Aviation.
+      I'm the founder and current owner of the Borea, startup offering high-quality kits for assembling ultralight aircraft.
     </>
   ),
 };
@@ -111,18 +102,14 @@ const about = {
     title: "Work Experience",
     experiences: [
       {
-        company: "FLY",
-        timeframe: "2022 - Present",
-        role: "Senior Design Engineer",
+        company: "NordicAlpha",
+        timeframe: "2013 - Present",
+        role: "Management board member",
         achievements: [
           <>
-            Redesigned the UI/UX for the FLY platform, resulting in a 20%
-            increase in user engagement and 30% faster load times.
+            Continuously improving the company's brand and services. Project management, creating new products, marketing, sales, customer support and more.
           </>,
-          <>
-            Spearheaded the integration of AI tools into design workflows,
-            enabling designers to iterate 50% faster.
-          </>,
+
         ],
         images: [
           // optional: leave the array empty if you don't want to display images
@@ -135,20 +122,54 @@ const about = {
         ],
       },
       {
-        company: "Creativ3",
-        timeframe: "2018 - 2022",
-        role: "Lead Designer",
+        company: "Vettoretti",
+        timeframe: "2022 - 2025",
+        role: "Managing Director at Vettoretti Srl",
         achievements: [
           <>
-            Developed a design system that unified the brand across multiple
-            platforms, improving design consistency by 40%.
+            Managing the company's operations, projects, production, personnel, marketing, sales and customer support.
           </>,
-          <>
-            Led a cross-functional team to launch a new product line,
-            contributing to a 15% increase in overall company revenue.
-          </>,
+
         ],
-        images: [],
+        images: [
+          {
+            src: "/images/projects/project-01/cover-01.jpg",
+            alt: "Once UI Project",
+            width: 16,
+            height: 9,
+          },
+          {
+            src: "/images/projects/project-01/cover-01.jpg",
+            alt: "Once UI Project",
+            width: 16,
+            height: 9,
+          },
+        ],
+      },
+      {
+        company: "Home Cucine",
+        timeframe: "2020 - 2022",
+        role: "Senior Software Developer at Home Cucine Srl",
+        achievements: [
+          <>
+            Developed a 3Cad Evolution design system that helps kitchen furniture manufacturer and their retailers to design their products faster and more efficiently.
+          </>,
+
+        ],
+        images: [
+          {
+            src: "/images/projects/project-01/cover-01.jpg",
+            alt: "Once UI Project",
+            width: 16,
+            height: 9,
+          },
+          {
+            src: "/images/projects/project-01/cover-01.jpg",
+            alt: "Once UI Project",
+            width: 16,
+            height: 9,
+          },
+        ],
       },
     ],
   },
@@ -157,12 +178,8 @@ const about = {
     title: "Studies",
     institutions: [
       {
-        name: "University of Jakarta",
-        description: <>Studied software engineering.</>,
-      },
-      {
-        name: "Build the Future",
-        description: <>Studied online marketing and personal branding.</>,
+        name: "Yaroslavl State Polytechnical University",
+        description: <>Master's degree, Engineering/Industrial Management.</>,
       },
     ],
   },
@@ -171,9 +188,9 @@ const about = {
     title: "Technical skills",
     skills: [
       {
-        title: "Figma",
+        title: "AutoCAD & SolidWorks",
         description: (
-          <>Able to prototype in Figma with Once UI with unnatural speed.</>
+          <>Modeling and designing furniture and kitchen furniture.</>
         ),
         // optional: leave the array empty if you don't want to display images
         images: [
@@ -192,9 +209,9 @@ const about = {
         ],
       },
       {
-        title: "Next.js",
+        title: "3Cad Evolution",
         description: (
-          <>Building next gen apps with Next.js + Once UI + Supabase.</>
+          <>Building design systems for furniture manufacturers and retailers.</>
         ),
         // optional: leave the array empty if you don't want to display images
         images: [

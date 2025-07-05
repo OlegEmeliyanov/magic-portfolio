@@ -1,4 +1,15 @@
-export function formatDate(date: string, includeRelative = false) {
+export function formatDate(date: string | Date | undefined, includeRelative = false) {
+  if (!date) return '';
+
+  // Convert Date object to ISO string
+  if (date instanceof Date) {
+    date = date.toISOString();
+  }
+
+  if (typeof date !== 'string') {
+    date = String(date);
+  }
+
   const currentDate = new Date();
 
   if (!date.includes("T")) {

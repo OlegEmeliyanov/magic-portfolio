@@ -70,3 +70,31 @@ export function getPosts(customPath = ["", "", "", ""]) {
   const postsDir = path.join(process.cwd(), ...customPath);
   return getMDXData(postsDir);
 }
+
+/**
+ * Gets the most recent project based on publishedAt date
+ * Used to automatically display the latest project in the featured section
+ * @returns {Object|null} Object containing title, slug, and href of the most recent project, or null if no projects exist
+ */
+export function getMostRecentProject() {
+  const projects = getPosts(["src", "app", "work", "projects"]);
+  
+  if (projects.length === 0) {
+    return null;
+  }
+
+  // Sort projects by publishedAt date (most recent first)
+  const sortedProjects = projects.sort((a, b) => {
+    const dateA = a.metadata.publishedAt ? new Date(a.metadata.publishedAt).getTime() : 0;
+    const dateB = b.metadata.publishedAt ? new Date(b.metadata.publishedAt).getTime() : 0;
+    return dateB - dateA;
+  });
+
+  const mostRecent = sortedProjects[0];
+  
+  return {
+    title: mostRecent.metadata.title,
+    slug: mostRecent.slug,
+    href: `/work/${mostRecent.slug}`,
+  };
+}
