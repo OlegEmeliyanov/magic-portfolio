@@ -80,7 +80,7 @@ const about = {
   },
   calendar: {
     display: true,
-    link: "https://cal.com",
+    link: "https://cal.com/ole-eme/15min",
   },
   intro: {
     display: true,
