@@ -156,16 +156,22 @@ const about = {
           </>,
 
         ],
+        // video: {
+        //   src: "https://www.cyncly.com/siteassets/assets/cyncly/products/3cad/kbfm---overview-video---3cad.mp4",
+        //   alt: "Once UI Project",
+        //   width: 16,
+        //   height: 9,
+        // },
         images: [
           {
-            src: "/images/projects/project-01/cover-01.jpg",
-            alt: "Once UI Project",
+            src: "/images/3cad-evolution.jpg",
+            alt: "3Cad Evolution",
             width: 16,
             height: 9,
           },
           {
-            src: "/images/projects/project-01/cover-01.jpg",
-            alt: "Once UI Project",
+            src: "/images/kitchen-sk.png",
+            alt: "Kitchen Project",
             width: 16,
             height: 9,
           },
